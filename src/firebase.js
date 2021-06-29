@@ -1,4 +1,3 @@
-/*
 import firebase from 'firebase';
 
 const firebaseConfig = {
@@ -10,15 +9,8 @@ const firebaseConfig = {
   appId: "1:253230171896:web:597947b4949243b0cf1d0d"
 };
 
-const rrfConfig = {
-  userProfile: 'users'
-  // useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
-}
-
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
-const firestoreDB = firebase.firestore()
 const provider = new firebase.auth.GoogleAuthProvider()
 
 export {firebaseApp, auth, provider}
-*/

@@ -7,10 +7,7 @@ import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import { BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import {store, rrfProps} from "./redux/store";
-
-import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
-
+import store from "./redux/store";
 
 import MainNav from "./components/navigation/MainNav";
 import Home from "./components/home/Home";
@@ -25,14 +22,12 @@ function App() {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <ReactReduxFirebaseProvider {...rrfProps}>
-          <MainNav />
-          <Route exact path="/" component={Home}/>
-          <Route path="/account" component={Account}/>
-          <Route path="/category" component={Category}/>
-          <Route path="/cart" component={Cart}/>
-          <Route path="/product/:productId" component={Product}/>
-          </ReactReduxFirebaseProvider>
+        <MainNav />
+        <Route exact path="/" component={Home}/>
+        <Route path="/account" component={Account}/>
+        <Route path="/category" component={Category}/>
+        <Route path="/cart" component={Cart}/>
+        <Route path="/product/:productId" component={Product}/>
       </Provider>
     </BrowserRouter>
   );
